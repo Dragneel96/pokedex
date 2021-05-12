@@ -20,17 +20,13 @@ export class ApiService {
     return this.http.get<RespuestasI>(direccion);
   }
 
-  detallePokedex(id: number): Observable<Ability[]> {
+  detallePokedex(id: number): Observable<Ability> {
     const direccion = this.url + 'ability/' + id + '/';
 
-    return this.http.get<Ability[]>(direccion);
+    return this.http.get<Ability>(direccion);
   }
 
 
-  detalle(id: number){
-    const direccion = this.url + 'ability/' + id + '/';
-    return this.http.get(direccion);
-  }
 
 
   colorPokemon(name: string): Observable<PokemonColor> {

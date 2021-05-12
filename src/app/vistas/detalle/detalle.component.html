@@ -1,14 +1,11 @@
 <div class="col">
     <div class="profile-card-4 text-center">
-        <img src="https://i.pinimg.com/originals/2f/a6/fa/2fa6fa2b399f3d85d8f403d4ac5ec666.png" width="50%" class="img img-responsive">
+        <img src="{{imgPokemon(datallePokemon.id)}}" width="50%" class="img img-responsive">
         <div class="profile-content">
-            <div class="profile-name">Pikachu
-                <p>Fuego</p>
+            <div class="profile-name">{{datallePokemon.name | uppercase}}
             </div>
             <div class="profile-description">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus nemo non delectus provident debitis. Nesciunt quis laudantium impedit reprehenderit. Dolore iure quod eum accusantium, sapiente id error adipisci voluptatem velit?Lorem ipsum dolor
-                sit amet consectetur, adipisicing elit. Possimus a suscipit, quidem maxime dignissimos, nulla molestias quibusdam labore obcaecati placeat accusamus dolores? Qui, quisquam quidem repudiandae odit soluta neque? Debitis!lo Lorem ipsum dolor
-                sit amet consectetur adipisicing elit. Quibusdam officia nesciunt illo voluptates quod nisi vitae qui quo ullam vel neque mollitia, quae repellendus, aspernatur, possimus sed officiis quia cumque.
+                {{datallePokemon.effect_entries[0].effect}}
             </div>
             <div class="row">
                 <div class="col-xs-4">
