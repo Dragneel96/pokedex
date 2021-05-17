@@ -11,29 +11,27 @@ import { Observable } from 'rxjs';
 })
 export class ApiService {
   // URL API
-  private url = 'https://pokeapi.co/api/v2/';
+  private url = 'https://pokeapi.co/api/v2';
   constructor(private http: HttpClient) { }
 
   catalogoPokedex(): Observable<RespuestasI> {
-    const direccion = this.url + 'pokemon?offset=20&limit=20';
+    const direccion = this.url + '/pokemon?offset=20&limit=20';
 
     return this.http.get<RespuestasI>(direccion);
   }
 
   detallePokedex(id: number): Observable<Ability> {
-    const direccion = this.url + 'ability/' + id + '/';
+    const direccion = this.url + '/ability/' + id + '/';
+    console.log('DIRECCION', direccion);
 
     return this.http.get<Ability>(direccion);
   }
 
-
-
-
-  colorPokemon(name: string): Observable<PokemonColor> {
-    const direccion = this.url + '/pokemon-color/' + name + '/';
-
-    return this.http.get<PokemonColor>(direccion);
+  getPokemonDetalle(id: number): any {
+    const direccion = this.url + '/pokemon/' + id + '/';
+    return this.http.get(direccion);
   }
+
 
 
 }

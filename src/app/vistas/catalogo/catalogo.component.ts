@@ -33,13 +33,17 @@ export class CatalogoComponent implements OnInit {
     return urlRemplazo + '.png';
   }
 
-  colorPokemons(name: string): string {
-    let color = '';
-    this.api.colorPokemon(name)
-      .subscribe(data => {
-        console.log(data);
-        color = data.name;
-      });
-    return color;
+  idPokemon(url: string): number {
+    const urlOriginal = url;
+    let urlRemplazo = urlOriginal.replace('https://pokeapi.co/api/v2/pokemon/', '');
+
+    urlRemplazo = urlRemplazo.substring(0, urlRemplazo.length - 1);
+
+    return +urlRemplazo;
+  }
+
+  colorPokemons(): string {
+    const color = Math.floor(0x1000000 * Math.random()).toString(16);
+    return '#' + ('000000' + color).slice(-6);
   }
 }
