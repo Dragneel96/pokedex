@@ -10,7 +10,7 @@ import { HeaderComponent } from './plantillas/header/header.component';
 import { FooterComponent } from './plantillas/footer/footer.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-//Componentes de angular material
+
 import { MatSliderModule } from '@angular/material/slider';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
